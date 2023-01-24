@@ -1,0 +1,13 @@
+.container
+{
+position: absolute;
+top: 40%;
+left: 50%;
+transform: translate(-40%,-50%);
+    
+}
+a {
+    margin-right: 50px;
+    text-decoration: none;
+    font-size: 30px;
+}
