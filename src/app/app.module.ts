@@ -7,18 +7,26 @@ import { CoursesService } from './Services/courses.service';
 import { HomeComponent } from './home/home.component';
 import { Routes } from '@angular/router';
 import { RouterModule } from '@angular/router';
+import { CourseComponent } from './courses/course/course.component';
 
 const appRoute:Routes = [
   {path:'', component:HomeComponent},
   {path:'Home',component:HomeComponent},
   {path:'Courses',component:CoursesComponent},
+  // {path:'Courses/Course/:id',component:CourseComponent},
+  {
+    path:'Courses',children:[
+      {path:'Course/:id',component:CourseComponent}
+    ]
+  }
 
 ]
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
-    HomeComponent
+    HomeComponent,
+    CourseComponent
   ],
   imports: [
     BrowserModule,

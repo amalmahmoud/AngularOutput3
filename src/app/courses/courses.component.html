@@ -1,4 +1,6 @@
 <div class="container">
+    <button class="btn btn-back" routerLink="/Home">Back to Home</button>
+
     <h2 >All Courses </h2>
     <ng-container *ngFor="let course of courses">
         <div class="course-container">
@@ -14,10 +16,11 @@
                 </div>
                 <div class="course-buttons">
                     <button class="btn btn-buy">Buy Now</button>
-                    <button class="btn btn-show" >Show</button>
+                    <button class="btn btn-show" routerLink="/Courses/Course/{{course.id}}"  >Show</button>
                 </div>
             </div>
         </div>  
     </ng-container>
+    <router-outlet></router-outlet>
 </div>
 
