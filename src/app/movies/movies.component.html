@@ -1,4 +1,6 @@
 <div class="container">
+    <button class="btn btn-back" routerLink="/Home">Back to Home</button>
+
     <h2>All Movies </h2>
     <ng-container *ngFor="let movie of movies">
         <div class="movie-container">
@@ -19,9 +21,10 @@
                 </div>
                 <div class="movie-buttons">
                     <button class="btn btn-buy">Buy Now</button>
-                    <button class="btn btn-show">Show</button>
+                    <button class="btn btn-show" routerLink="/Movies/Movie/{{movie.id}}">Show</button>
                 </div>
             </div>
         </div>
     </ng-container>
+    <router-outlet></router-outlet>
 </div>

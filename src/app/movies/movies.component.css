@@ -55,3 +55,11 @@
 .btn-show {
     background-color: #ABEBC6;
 }
+
+button:hover {
+    cursor: pointer;
+}
+
+.btn-back {
+    background-color: #EC7063;
+}

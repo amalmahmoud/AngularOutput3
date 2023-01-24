@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { CourseComponent } from './courses/course/course.component';
 import { MoviesComponent } from './movies/movies.component';
 import { MoviesService } from './Services/movies.service';
+import { MovieComponent } from './movies/movie/movie.component';
 
 const appRoute: Routes = [
   { path: '', component: HomeComponent },
@@ -20,6 +21,11 @@ const appRoute: Routes = [
     path:'Courses',children:[
       {path:'Course/:id',component:CourseComponent}
     ]
+  },
+  {
+    path:'Movies',children:[
+      {path:'Movie/:id',component:MovieComponent}
+    ]
   }
 ]
 @NgModule({
@@ -28,7 +34,8 @@ const appRoute: Routes = [
     CoursesComponent,
     HomeComponent,
     CourseComponent,
-    MoviesComponent
+    MoviesComponent,
+    MovieComponent
   ],
   imports: [
     BrowserModule,
