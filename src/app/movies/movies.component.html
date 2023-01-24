@@ -1,0 +1,27 @@
+<div class="container">
+    <h2>All Movies </h2>
+    <ng-container *ngFor="let movie of movies">
+        <div class="movie-container">
+            <div class="movie-card">
+                <div>
+                    <img [src]="movie.image" style="width:220px; height:140px;">
+                </div>
+                <div class="movie-name">
+                    <h4>{{ movie.name}}</h4>
+                </div>
+                <div class="movie-description">
+                    <p>{{movie.description.slice(0, 80)}}...</p>
+                </div>
+                <div class="details">
+                    <div class="movie-type" [ngStyle]="{color: movie.type === 'Free' ? 'Green' : 'Red'}">{{movie.type}}
+                    </div>
+                    <div class="movie-price"><b>Price:</b> ${{movie.price}}</div>
+                </div>
+                <div class="movie-buttons">
+                    <button class="btn btn-buy">Buy Now</button>
+                    <button class="btn btn-show">Show</button>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>
